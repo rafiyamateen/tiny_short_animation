@@ -1,38 +1,322 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#navbar {
+    width: 100%;
+    height: 65px;
+    padding: 10px;
+    background-image: linear-gradient(270deg, rgb(8, 56, 61), rgb(1, 100, 95));
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    box-shadow: gray 0 0 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#navbar img {
+    height: 120px;
+    margin: 8px 0px 0px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+#about {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 20px 0 20px;
+    margin-top: 65px;
+    background-color: rgb(219, 219, 219);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#about h1 {
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+#about h2 {
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+#about p {
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-top: 50px;
+}
+
+#about_img {
+    padding: 40px 10px 0 10px;
+}
+
+#about_text {
+    padding: 50px;
+}
+
+#president {
+    width: 430px;
+}
+
+#courses_div {
+    display: flex;
+    padding: 10px
+}
+
+.course_grid {
+    display: flex;
+    justify-content: center;
+}
+
+.courses {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 180px;
+}
+
+.courses:hover {
+    cursor: pointer;
+}
+
+.course_heading {
+    text-align: center;
+    align-self: center;
+    padding: 20px;
+}
+
+.detail {
+    font-size: 12px;
+    line-height: 1.5em;
+    padding: 20px;
+}
+
+.bold {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#courses_head {
+    text-align: center;
+    letter-spacing: 0.5em;
+    color: rgb(88, 85, 85);
+    z-index: 5;
+}
+
+#available_programs {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#ai {
+    border-top: 40px solid rgb(19, 19, 83);
+    color: rgb(19, 19, 83);
+}
+
+#ai_d {
+    background-color: rgb(19, 19, 83);
+    color: white;
+}
+
+#cnc {
+    border-top: 40px solid rgb(231, 49, 110);
+    color: rgb(231, 49, 110);
+}
+
+#cnc_d {
+    background-color: rgb(231, 49, 110);
+    color: white;
+}
+
+#blockchain {
+    border-top: 40px solid rgb(228, 214, 20);
+    color: rgb(228, 214, 20);
+}
+
+#blockchain_d {
+    background-color: rgb(228, 214, 20);
+    color: white;
+}
+
+#iot {
+    border-top: 40px solid rgb(19, 141, 141);
+    color: rgb(19, 141, 141);
+}
+
+#iot_d {
+    background-color: rgb(19, 141, 141);
+    color: white;
+}
+
+#video_div {
+    background-color: #2f2c2c;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#video {
+    display: inline-block;
+    margin: 20px;
+    height: 450px;
+    width: 700px
+}
+
+#partners_div {
+    background-color: #e0e6ea;
+    padding: 50px;
+}
+
+#partners {
+    text-align: center;
+    margin-top: 0;
+    color: #22296f;
+}
+
+#logos_div {
+    display: flex;
+    justify-content: center;
+}
+
+.logos {
+    display: inline-block;
+    margin: 15px;
+}
+
+#panacloud {
+    width: 120px;
+}
+
+#psx {
+    width: 60px;
+}
+
+#saylani {
+    width: 170px;
+}
+
+#contacts {
+    background-color: rgb(20, 46, 61);
+    color: rgb(219, 217, 213);
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: center;
+}
+
+#contacts span {
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+#contacts p {
+    font-weight: bold;
+}
+
+.icons {
+    color: rgb(83, 180, 104);
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+#fb, #yt {
+    font-size: 30px;
+}
+
+#foot {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#foot img {
+    display: inline-block;
+    width: 100px;
+}
+
+#foot p {
+    margin: 0;
+    padding: 10px 10px 0 0;
+    color: cornsilk;
+    text-align: right;
+}
+
+@media screen and (max-width:1165px) {
+    #president {
+        width: 300px;
+    }
+    #about h1 {
+        font-size: 40px;
+    }
+    #about h2 {
+        font-size: 25px;
+    }
+    #about_text {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .course_heading {
+        padding: 0
+    }
+    #contacts {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:805px) {
+    #president {
+        width: 250px;
+    }
+    #about_text {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #about_img {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #navbar img {
+        height: 80px;
+    }
+    #navbar {
+        height: 60px;
+    }
+    #contacts {
+        flex-direction: column;
+    }
+    #video {
+        width: 98%;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:715px) {
+    #president {
+        width: 200px;
+    }
+    #about {
+        padding-left: 0;
+    }
+    #about h1 {
+        font-size: 30px;
+    }
+    #about h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:575px) {
+    #about {
+        flex-direction: column;
+    }
+    #about_text {
+        padding-top: 0;
+    }
 }
